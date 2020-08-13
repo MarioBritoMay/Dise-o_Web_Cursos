@@ -1,0 +1,274 @@
+/*Selector de etiqueta */
+
+body {
+    font-family: 'Source Sans Pro';
+}
+
+.header  {
+     background-color: #1b2127;  /*El important sirve para darle prioridad a este estilo  */
+     height: 90px;
+     color: white;
+     display: flex;
+     justify-content: space-between;
+}
+
+.menu { /* .menu hereda de .header */
+    height: inherit;
+  }
+
+.header ul {
+    display: flex;
+    height: inherit;
+  }
+  
+.header ul li { /* .header ol li hereda de .header ol */
+    height: inherit;
+  }
+
+header a {
+    color: white;
+    text-decoration: none;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+figure {
+    margin: 0;
+  }
+
+.hero{
+    height: 300px;
+    background-color: #1b2127;
+    /* background-image: url('imagenes/imagen portada.jpg'); */
+    /* background-size: 500px 300px; */
+    /* background-repeat: no-repeat;
+    background-position-x: right; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-image {
+    object-fit: cover;
+}
+
+h1 {
+    margin: 0;
+    color: white;
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 1.5;
+    letter-spacing: -.2px;   /* Espaciado entre letra y letra */
+    text-transform: uppercase; /*transforma todo a mayusculas o minusculas etc etc*/
+    /* text-decoration: ; */
+}
+
+
+h1 strong {
+    color: #026fff;
+}
+
+h1, h2,h3, h4, h5, h6 {
+    font-family: 'Fjalla One' sans-serif;
+}
+
+.portfolio{
+    background-color: #fafafa;
+    padding: 20px;
+    align-items: center;
+}
+
+h2{
+    color: #026fff;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro';
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.project{
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-title {
+    font-size: 30px;
+    margin-top: 0px;
+    margin: 10px 0px;
+}
+
+.kind-project, .project-date, .project-reference{
+    margin: 10px 0px;
+}
+
+/* .project-date{
+    margin: 10px 0px;
+} */
+
+.project-details {
+    width: 600px;
+    display: inline-block;
+}
+
+.project strong {
+    font-family: 'Fjalla One' sans-serif;
+}
+
+.project-imageContainer{
+    /* width: 500px; */
+    display: inline-block;
+
+}
+
+.job-listTitle {
+    margin-left: 10px;
+}
+
+.job-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between;
+    align-items: center; */
+}
+
+.job {
+    background-color: #f4fbff;
+    border: 1px solid gray ;
+    margin: 10px;
+    width: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+     flex-shrink: 0; /*da en porcentaje un osfet de cuanto puede variar su tamaño segun los parametros que le tengo establecido */
+}
+
+.job-details {
+    margin: 20px 40px;
+    margin-top: -40px;
+    background-color: white;
+    position: relative;
+    padding: 15px;
+    text-align: center;
+}
+
+.job-description {
+    text-align: left;
+}
+
+.job img {
+    width: 450px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.job-url {
+    border: 1px solid #056fff;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #056fff;
+    border-radius: 10px;
+}
+
+.footer{
+    background-color: #1b2127;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact {
+    background-color: #056fff;
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social {
+    
+}
+
+.form-email {
+    margin-left: 10px;
+}
+
+.form-email input{
+    border-color: gray;
+    border-radius: 5px;
+    border-style: solid;
+    padding: 5px 25px;
+    background-image: url('imagenes/email.svg');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position-y:center ;
+    background-position-x:  5px; 
+}
+
+.form-email button {
+    display: block;
+    background: transparent;
+    color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 10px;
+    /* margin: 10px auto 0; */
+}
+
+.form-email h3{
+    font-family: 'Source Sans Pro';
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-size: 50px 50px;
+    margin: 0px 10px;
+}
+
+.social-link.twitter {
+    background-image: url('../imagenes/twitter.svg');
+}
+
+.social-link.facebook {
+    background-image: url('../imagenes/facebook.svg');
+}
+
+.social-link.github {
+    background-image: url('../imagenes/github.svg');
+}
+
+.social-link.instagram {
+    background-image: url('../imagenes/instagram.svg');
+}
+
+.footer a {
+    color: white;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    display: inherit;
+    height: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    flex-wrap: inherit;
+}
