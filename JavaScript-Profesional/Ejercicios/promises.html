@@ -26,11 +26,12 @@
       const apiKey = 'b89fc45c2067cbd33560270639722eae';
 
       async function getMovie(id) {
-      const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`;
-      const response = await  fetch(url)
-      const data =  await response.json();
-      return data;
+        const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
       }
+
       async function getPopularMovies() {
         const url = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${apiKey}`;
         const response = await fetch(url);
@@ -40,16 +41,17 @@
 
       async function getTopMoviesIds(n = 3) {
         // return getPopularMovies().then(popularMovies =>
-        //    popularMovies.slice(0, n).map(movie => movie.id)
-        //  );
+        //   popularMovies.slice(0, n).map(movie => movie.id)
+        // );
         // try {
         //   const popularMovies = await getPopularMovies();
         // } catch (error) {
-        //   console.log(error.message);
+        //   console.log(error.message)
         // }
+
         const popularMovies = await getPopularMovies();
-        const ids = popularMovies.slice(0, n).map(movie => movie.id)
-        return ids; 
+        const ids = popularMovies.slice(0, n).map(movie => movie.id);
+        return ids;
       }
 
       function renderMovies(movies) {
@@ -70,20 +72,22 @@
 
       async function getTopMoviesInSequence() {
         const ids = await getTopMoviesIds();
-        const movies = []
+        const movies = [];
 
         for (const id of ids) {
           const movie = await getMovie(id);
           movies.push(movie);
         }
+
         return movies;
       }
 
       async function getTopMoviesInParallel() {
-        const ids = await getTopMoviesIds(); 
+        const ids = await getTopMoviesIds();
         const moviePromises = ids.map(id => getMovie(id));
 
-        const movies = await Promise.all(moviePromises)
+        const movies = await Promise.all(moviePromises);
+
         return movies;
       }
 
@@ -109,7 +113,6 @@
         const movie = await getFastestTopMovie();
         renderMovies([movie]);
       };
-    
     </script>
   </body>
 </html>
