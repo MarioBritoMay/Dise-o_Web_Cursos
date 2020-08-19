@@ -2,7 +2,9 @@ class AutoPause {
     constructor() {
         this.threshold = 0.25; // es un margen del procentaje del elemento visible en la pantalla
         this.handlerIntersection = this.handlerIntersection.bind(this);
+        this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
     }
+
     run(player) {
         this.player = player
         //el primer argumento es lo que va a manejar mientras que el segundo es el objeto de configuracion 
@@ -11,12 +13,23 @@ class AutoPause {
             threshold: this.threshold
         });
 
-        observer.observe(player.media);//le pasamos el objeto que va a observar
+        observer.observe(player.media);//le pasamos el objeto que va a observa
+        
+        document.addEventListener('visibilitychange', this.handleVisibilityChange);
     }
     //los entries son los objetos que esta observando el intersectionObserver
     handlerIntersection(entries) {
        const entry = entries[0];
        const isVisible = entry.intersectionRatio >= this.threshold;
+        if (isVisible) {
+            this.player.play();
+        } else {
+            this.player.pause();
+        }
+    }
+
+    handleVisibilityChange() {
+        const isVisible = document.visibilityState == "visible";
         if (isVisible) {
             this.player.play();
         } else {
