@@ -1,4 +1,4 @@
-update=29/09/2020 11:49:32
+update=29/09/2020 18:20:44
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,6 +23,8 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
@@ -59,5 +61,14 @@ LibName29=opto
 LibName30=atmel
 LibName31=contrib
 LibName32=valves
-[general]
-version=1
+LibName33=libraries/conn
+LibName34=libraries/device
+LibName35=libraries/Diode
+LibName36=libraries/power
+LibName37=libraries/TPS61087DSCR
+LibName38=libraries/leds
+LibName39=libraries/regul
+LibName40=libraries/switches
+LibName41=libraries/ATXMEGA32A4U-AU
+LibName42=libraries/FT232RL
+LibName43=libraries/HC-05
