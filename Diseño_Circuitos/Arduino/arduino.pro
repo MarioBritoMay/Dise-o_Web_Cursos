@@ -1,4 +1,4 @@
-update=29/09/2020 18:20:44
+update=30/09/2020 16:05:00
 version=1
 last_client=kicad
 [pcbnew]
@@ -72,3 +72,14 @@ LibName40=libraries/switches
 LibName41=libraries/ATXMEGA32A4U-AU
 LibName42=libraries/FT232RL
 LibName43=libraries/HC-05
+LibName44=libraries/L293DD
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=Output/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
